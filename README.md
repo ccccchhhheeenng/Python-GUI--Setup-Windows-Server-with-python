@@ -13,35 +13,122 @@
 
 - [Download latest](https://github.com/ccccchhhheeenng/Windows-Server-Tool/raw/refs/heads/main/Application.exe)
 
+<div align="center">
+  <a href="https://github.com/ccccchhhheeenng/Python-GUI--Setup-Windows-Server-with-python/stargazers">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/ccccchhhheeenng/Python-GUI--Setup-Windows-Server-with-python">
+  </a>
+  <a href="https://twitter.com/ccccchhhheeenng">
+    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/ccccchhhheeenng">
+  </a>
+</div>
+
+# Setup-Windows-Server-with-python
 
 ## Releases
-### v 1.2.1
-release at 2024/12/15
+### v1.0.0
+Released at 2024/04/05
 
-<a href="https://github.com/ccccchhhheeenng/Windows-Server-Tool/raw/refs/heads/main/Releases/1.2.1.exe">Windows Executeable Download</a>
+- [Windows Executable Download](https://github.com/ccccchhhheeenng/Python-GUI--Setup-Windows-Server-with-python/raw/main/Application.exe)
+- [Source Code](https://github.com/ccccchhhheeenng/Python-GUI--Setup-Windows-Server-with-python/raw/main/main.py)
 
-<a href="https://github.com/ccccchhhheeenng/Windows-Server-Tool/blob/main/Releases/1.2.1.py">Source Code</a>
+## How to use
+> [!WARNING]
+> This app can only run on Windows Server.
 
-### v 1.2
-release at 2024/11/13
+### Installation steps
+1. Download the latest release.
+2. Open it and enjoy the app.
 
-<a href="https://github.com/ccccchhhheeenng/Windows-Server-Tool/raw/refs/heads/main/Releases/1.2.exe">Windows Executeable Download</a>
+### DHCP
+> [!IMPORTANT]
+> Please install the DHCP feature before setup.
 
-<a href="https://github.com/ccccchhhheeenng/Windows-Server-Tool/blob/main/Releases/1.2.py">Source Code</a>
+Input the config and press **Finish** to setup.
 
-### v 1.1
-release at 2024/04/05
+<details>
+<summary>Example</summary>
 
-<a href="https://github.com/ccccchhhheeenng/Windows-Server-Tool/raw/refs/heads/main/Releases/1.1.exe">Windows Executeable Download</a>
+```text
+StartRange:  192.168.0.100
+EndRange:    192.168.0.200
+SubnetMask:  255.255.255.0
+ScopeName:   DHCP_Scope
+DNS Address: 1.1.1.1
+Router IP:   192.168.0.1
+```
 
-<a href="https://github.com/ccccchhhheeenng/Windows-Server-Tool/blob/main/Releases/1.1.py">Source Code</a>
+</details>
 
-### v 1.0
-release at 2024/04/05
+![DHCP Setup Screenshot](https://hackmd.io/_uploads/B1uzlprM0.png)
 
-<a href="https://github.com/ccccchhhheeenng/Windows-Server-Tool/raw/refs/heads/main/Releases/1.0.exe">Windows Executeable Download</a>
+### DNS
+> [!IMPORTANT]
+> Please install the DNS feature before setup.
 
-<a href="https://github.com/ccccchhhheeenng/Windows-Server-Tool/raw/refs/heads/main/Releases/1.0.py">Source Code</a>
+#### Forward lookup
 
+<details>
+<summary>Add Primary Zone</summary>
+
+This function can add a DNS zone.
+
+Example:
+
+```text
+Zone Name: hello.world
+```
+
+![Add Primary Zone Screenshot](https://hackmd.io/_uploads/SyY5MTHfA.png)
+
+</details>
+
+<details>
+<summary>Add DNS Record</summary>
+
+This function can add a DNS record.
+
+Supported record types: `A`, `AAAA`, `CNAME`
+
+Steps:
+
+1. Enter the zone where you want to add a DNS record.
+
+![Set Zone Screenshot](https://hackmd.io/_uploads/Sk4drTBzR.png)
+
+2. Enter the record name and IP address.
+
+![Set Record Screenshot](https://hackmd.io/_uploads/B14cSpHzC.png)
+
+Example:
+
+```text
+1.
+Set Zone:    hello.world
+Record Type: A
+
+2.
+Name:        aaa
+IP Address:  127.0.0.1
+```
+
+</details>
+
+<details>
+<summary>Remove Primary Zone</summary>
+
+(TODO)
+
+</details>
+
+<details>
+<summary>Remove DNS Record</summary>
+
+(TODO)
+
+</details>
+
+#### Reverse lookup
+
+#### Set Forwarder
 
 
